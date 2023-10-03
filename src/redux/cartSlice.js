@@ -7,7 +7,7 @@ const cartSlice = createSlice({
   },
   reducers: {
     addItems: (state, action) => {
-      console.log(action.payload);
+      // console.log(action.payload);
       if (state.cartItems[action.payload.name]) {
         state.cartItems[action.payload.name]["count"] = ++state.cartItems[
           action.payload.name
@@ -19,8 +19,7 @@ const cartSlice = createSlice({
       // console.log(state.cartItems[action.payload.name]["count"])
     },
     removeItems: (state, action) => {
-
-      if (state.cartItems[action.payload.name]["count"] > 1) {
+      if (state.cartItems[action.payload.name]["count"] >= 1) {
         state.cartItems[action.payload.name]["count"] = --state.cartItems[
           action.payload.name
         ]["count"];

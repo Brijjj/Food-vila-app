@@ -24,7 +24,6 @@ const RestaurentMenuItem = ({ menuItem }) => {
   return (
     <div>
       {menuItem?.map((el, id) => {
-        console.log(el);
         if (id > 0 && el?.card?.card?.title !== undefined)
           return (
             <div key={id}>
